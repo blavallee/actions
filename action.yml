@@ -1,0 +1,8 @@
+name: 'Clang-format'
+description: 'Run clang-format on your diff'
+outputs:
+  location:
+    description: 'Where is clang-format'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
