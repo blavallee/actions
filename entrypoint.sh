@@ -1,4 +1,3 @@
 #!/bin/sh -l
 
-loc=$(ls -al /usr/bin/clang*)
-echo "::set-output name=location::$loc"
+git-clang-format HEAD~1 --extensions cpp,c,h,hpp --diff
