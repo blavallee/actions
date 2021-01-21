@@ -1,8 +1,8 @@
 name: 'Clang-format'
-description: 'Run clang-format on your diff'
+description: 'Run clang-format on the last changeset'
 outputs:
-  location:
-    description: 'Where is clang-format'
+ changes_detected:
+    description: 'Whether if Clang-format modified some files'
 runs:
   using: 'docker'
   image: 'Dockerfile'
