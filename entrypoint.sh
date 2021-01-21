@@ -6,3 +6,4 @@ if [ -n "$(git status --porcelain)" ]; then
 else
   echo "::set-output name=changes_detected::false";
 fi
+ls -al
