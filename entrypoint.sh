@@ -3,7 +3,7 @@
 git clang-format HEAD~
 if [ -n "$(git status --porcelain)" ]; then
   echo "::set-output name=changes_detected::true";
-  newbranch='ClangFormat-$(git rev-parse HEAD)'
+  newbranch="ClangFormat-$(git rev-parse HEAD)"
   git checkout -b $newbranch
   git config user.name blavallee
   git config user.email benoitlavallee@gmail.com
