@@ -5,6 +5,7 @@ RUN apt-get update \
        clang-format \
        git \
        colordiff \
+       ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /entrypoint.sh
