@@ -1,8 +1,5 @@
-name: 'Clang-format'
-description: 'Run clang-format on the last changeset'
-outputs:
- changes_detected:
-    description: 'Whether if Clang-format modified some files'
+name: Explore debug
+description: Show available data for any Action run
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile

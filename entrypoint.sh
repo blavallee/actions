@@ -1,9 +1,16 @@
-#!/bin/sh -l
+#!/bin/sh
 
-git clang-format HEAD~
-if [ -n "$(git status --porcelain)" ]; then
-  echo "::set-output name=changes_detected::true";
-else
-  echo "::set-output name=changes_detected::false";
-fi
+echo "Debug information:"
 
+IFS=$'\n'
+for v in `env`; do
+  PREFIX=$(echo $v| cut -d '_' -f1)
+
+  if [[ $PREFIX == 'GITHUB' ]] || [[ $PREFIX == 'INPUT' ]]; then
+    echo "$v";
+  fi
+done
+
+echo "---"
+echo "Event:"
+jq . $GITHUB_EVENT_PATH
